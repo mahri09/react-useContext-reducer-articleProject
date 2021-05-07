@@ -13,7 +13,8 @@ const AddArticle = () => {
   const onSubmit=(e)=>{
     e.preventDefault();
     console.log(article);
-    context.saveArticle(article)
+  //context.saveArticle(article)
+    context.saveArticle({type:"Add-Article", article})
     
   }
   console.log(context)
