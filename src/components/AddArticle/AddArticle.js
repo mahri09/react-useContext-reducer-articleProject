@@ -14,10 +14,10 @@ const AddArticle = () => {
     e.preventDefault();
     console.log(article);
   //context.saveArticle(article)
-    context.saveArticle({type:"Add-Article", article})
+    context.dispatch({type:"Add-Article", article})
     
   }
-  console.log(context)
+  console.log(context.dispatch)
 
   return (
     <form className="add-article">

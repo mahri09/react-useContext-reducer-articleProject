@@ -11,7 +11,7 @@ const initialState = [
 const ArticleProvider = ({ children }) => {
 
   // const [articles, setarticles] = useState(initialState);
-  const [articles, saveArticle] = useReducer(reducer, initialState);
+  const [articles, dispatch] = useReducer(reducer, initialState);
 
   /* const saveArticle = (article) => {
     const newArticle = {
@@ -24,7 +24,7 @@ const ArticleProvider = ({ children }) => {
 
 
   return (
-    <ArticleContext.Provider value={{ articles, saveArticle }}>
+    <ArticleContext.Provider value={{ articles, dispatch }}>
       {children}
     </ArticleContext.Provider>
   );

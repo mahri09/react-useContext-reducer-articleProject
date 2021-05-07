@@ -10,7 +10,7 @@ import {ArticleContext} from '../context/articleContext';
 const Articles = () => {
   // const [articles, setarticles] = useState(initialState)
   const context = useContext(ArticleContext)
-  console.log(context)
+  // console.log(context)
   return (
     <div>
     {context.articles.map((article)=>{
