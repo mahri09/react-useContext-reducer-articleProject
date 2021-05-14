@@ -3,12 +3,14 @@ import './Article.css'
 import {ArticleContext} from '../../context/articleContext'
 
 export default function Article({article}) {
-  const context = useContext(ArticleContext)
+  const {dispatch} = useContext(ArticleContext)
 
   const handleDelete=(e)=>{
-    console.log(e.target.id)
+    /* variant No=1
     const id = e.target.id
-    context.dispatch({type:"Delete-Article", id})
+    dispatch({type:"Delete-Article", id})*/
+    //variant no=2:
+    dispatch({type:"Delete-Article", article})
   } 
   
   return (

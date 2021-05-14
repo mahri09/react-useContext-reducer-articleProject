@@ -12,10 +12,11 @@ export const reducer = (state, action) => {
         },
       ];
     case "Delete-Article":
+      /* variant 1(see in the reducer too):
       const update = [...state];
       update.splice(update.indexOf(action.id), 1);
-      return update;
-    // return state.filter(article=>article.id!==action.article.id)
+      return update;*/
+      return state.filter(article=>article.id!==action.article.id)
     default:
       return state;
   }
